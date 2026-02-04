@@ -18,7 +18,7 @@
 class TODO {
 public:
     static void printMenu() {
-        std::cout << "\n\t\t\t\t\t\t\t___WELCOM TO___\n";
+        std::cout << "\n\t\t\t\t\t\t\t___WELCOME TO___\n";
 
         std::cout << "\n\t\t\t\t\t\t___A WHAT TO DO LIST SIMULATION___\n";
         std::cout << std::uppercase
@@ -185,4 +185,7 @@ std::printf("This is a comand line to do list which is made for any person who w
     } while (choice != 6);
 
     return 0;
+
 }
+
+// code succesfully writen and maintained by I Risima Chabalala
