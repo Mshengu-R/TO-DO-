@@ -13,7 +13,7 @@
 
 // int WINAPI WinMain(HINSTANCE HInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow){
 // HICON hIcon = LoadIcon(HInstance, MAKEINTRESOURCE(IDI_ICON1));
-// }    // Still a junior, no one taught me how to add an icon to my application
+// }    //  Trying to add an icon for the application
 
 class TODO {
 public:
@@ -189,3 +189,4 @@ std::printf("This is a comand line to do list which is made for any person who w
 }
 
 // code succesfully writen and maintained by I Risima Chabalala
+
