@@ -103,20 +103,20 @@ public:
     void remove_an_opt_from_list(){
         viewList();  
 
-        int O = 0; //O for option
+        int Option = 0; 
         std::printf("\n\t\t\t\t Which option do you wish to remove from your list: ");
         
 
-        if( !(std::cin >> O) || O <= 0) std::cout << "\n\t\t\t\t/Please enter a valid positive number \n"; 
+        if( !(std::cin >> Option) || Option <= 0) std::cout << "\n\t\t\t\t/Please enter a valid positive number \n"; 
         
 
         else { std::ifstream in(filename); 
-            
-            if(in.is_open()) things.at(O - 1).erase();
+            // the deleting uses index of vectors so if user wrote 2 the computer will remove what is in the user's 3 
+            if(in.is_open()) things.at(Option - 1).erase();
             in.close();
             
             std::ofstream out(filename); 
-            if(out.is_open()) for(const auto &s : things) out << s << '\n'; //To save what remains
+            if(out.is_open()) for(const auto &s : things) out << s << '\n'; // To save what remains
             out.close();
 
             std::cout<<"\n\t\t\t\t***The option has succesfully been deleted from the list***";}
@@ -128,7 +128,7 @@ public:
 
 
 int main() {
-    User ui;
+    User ui; // object for the User class
     int choice = 0;
 
     do {
@@ -139,7 +139,7 @@ int main() {
             std::cin.clear();
             std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
             
-            std::cout << "\n\t\t\tInvalid input. Enter a number 1-4.\n";
+            std::cout << "\n\t\t\tInvalid input. Enter a number 1- 6.\n";
             continue;
         }
 
@@ -185,8 +185,6 @@ std::printf("This is a comand line to do list which is made for any person who w
     } while (choice != 6);
 
     return 0;
-
 }
 
 // code succesfully writen and maintained by I Risima Chabalala
-
